@@ -68,7 +68,7 @@ class HuYa:
 def get_real_url(rid):
     try:
         hy = HuYa(rid)
-        return hy.get_real_url()
+        return {'hls_url': hy.get_real_url()['2000p']}
     except Exception as e:
         print('Exception：', e)
         return False
