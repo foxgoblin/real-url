@@ -113,6 +113,13 @@ class DouYu:
             key = self.get_js()
         return "http://tx2play1.douyucdn.cn/live/{}.flv?uuid=".format(key)
 
+def get_real_url(rid):
+    try:
+        douyu = DouYu(rid)
+        return {'hls_url': douyu.get_real_url()}
+    except Exception as e:
+        print('Exception：', e)
+        return False
 
 if __name__ == '__main__':
     r = input('输入斗鱼直播间号：\n')
