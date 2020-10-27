@@ -25,8 +25,7 @@ class JD:
                 real_url = data['h5Pull']
                 return real_url
             else:
-                print('未开播')
-                real_url = '回放：' + data.get('playBack').get('videoUrl', 0)
+                real_url = data.get('playBack').get('videoUrl', 0)
                 return real_url
         else:
             raise Exception('直播间不存在')

@@ -16,9 +16,9 @@ class YiZhiBo:
             m3u8url = 'http://al01.alcdn.hls.xiaoka.tv/live/{}.m3u8'.format(scid)
             rtmpurl = 'rtmp://alcdn.r01.xiaoka.tv/live/live/{}'.format(scid)
             real_url = {
-                'flvurl': flvurl,
-                'm3u8url': m3u8url,
-                'rtmpurl': rtmpurl
+                'flv_url': flvurl,
+                'hls_url': m3u8url,
+                'rtmp_url': rtmpurl
             }
         except:
             raise Exception('链接错误')

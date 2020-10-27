@@ -39,7 +39,7 @@ class YY:
 def get_real_url(rid):
     try:
         yy = YY(rid)
-        return yy.get_real_url()
+        return {'hls_url': yy.get_real_url()}
     except Exception as e:
         print('Exception：', e)
         return False

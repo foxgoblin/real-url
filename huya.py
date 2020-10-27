@@ -68,7 +68,19 @@ class HuYa:
 def get_real_url(rid):
     try:
         hy = HuYa(rid)
-        return hy.get_real_url()
+        real_url = hy.get_real_url()
+        if 'tx' in real_url
+            return real_url['tx']
+        elif '2000p' in real_url :
+            return real_url['2000p']
+        elif 'bd' in real_url['bd'] :
+            return real_url['bd']
+        elif 'migu-bd' in real_url :
+            return real_url['migu-bd']
+        elif 'replay' in real_url :
+            return real_url['replay']
+        else :
+            return False
     except Exception as e:
         print('Exception：', e)
         return False

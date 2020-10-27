@@ -26,7 +26,7 @@ class YuanBoBo:
 def get_real_url(rid):
     try:
         th = YuanBoBo(rid)
-        return th.get_real_url()
+        return {'hls_url': th.get_real_url()}
     except Exception as e:
         print('Exception：', e)
         return False

@@ -116,7 +116,7 @@ class DouYu:
 def get_real_url(rid):
     try:
         douyu = DouYu(rid)
-        return {'hls_url': douyu.get_real_url()}
+        return douyu.get_real_url()
     except Exception as e:
         print('Exception：', e)
         return False

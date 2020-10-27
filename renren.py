@@ -27,7 +27,7 @@ class RenRen:
                     t = 'http://ksy-hls.renren.com/live/' + e + '/index.m3u8?key=' + key
                     return t
                 elif livestate.group(1) == '1':
-                    return '回放：' + s
+                    raise Exception('未开播')
             except IndexError:
                 raise Exception('解析错误')
         else:

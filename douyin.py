@@ -30,7 +30,8 @@ class DouYin:
 def get_real_url(rid):
     try:
         dy = DouYin(rid)
-        return dy.get_real_url()
+        real_url = dy.get_real_url()
+        return {'rtmp_url': real_url[0], 'hls_url': real_url[1]}
     except Exception as e:
         print('Exception：', e)
         return False

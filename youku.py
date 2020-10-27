@@ -42,7 +42,7 @@ class YouKu:
 def get_real_url(rid):
     try:
         yk = YouKu(rid)
-        return yk.get_real_url()
+        return {'hls_url': yk.get_real_url()}
     except Exception as e:
         print('Exception：', e)
         return False

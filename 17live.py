@@ -23,7 +23,7 @@ class Live17:
 def get_real_url(rid):
     try:
         live17 = Live17(rid)
-        return live17.get_real_url()
+        return live17.get_real_url()[0]
     except Exception as e:
         print('Exception：', e)
         return False

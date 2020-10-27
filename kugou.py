@@ -16,7 +16,7 @@ class KuGou:
             real_url_hls = response2.get('data').get('horizontal')[0].get('httpshls')[0]
         except:
             raise Exception('直播间不存在或未开播')
-        return {"flv": real_url_flv, "hls": real_url_hls}
+        return {"flv_url": real_url_flv, "hls_url": real_url_hls}
 
 
 def get_real_url(rid):

@@ -54,7 +54,7 @@ class HuoMao:
             if roomStatus == '1':
                 real_url_flv = response.get('streamList')[-1].get('list')[0].get('url')
                 real_url_m3u8 = response.get('streamList')[-1].get('list_hls')[0].get('url')
-                real_url = [real_url_flv, real_url_m3u8.replace('_480', '')]
+                real_url = {'flv_url': real_url_flv, 'hls_url': real_url_m3u8.replace('_480', '')}
             else:
                 raise Exception('直播间未开播')
         else:

@@ -26,7 +26,7 @@ class ChuShou:
 def get_real_url(rid):
     try:
         cs = ChuShou(rid)
-        return cs.get_real_url()
+        return cs.get_real_url()['hdPlayUrl']
     except Exception as e:
         print('Exception：', e)
         return False

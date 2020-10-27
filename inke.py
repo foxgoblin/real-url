@@ -26,7 +26,7 @@ class InKe:
 def get_real_url(rid):
     try:
         inke = InKe(rid)
-        return inke.get_real_url()
+        return inke.get_real_url()['stream_addr']
     except Exception as e:
         print('Exception：', e)
         return False

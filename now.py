@@ -14,9 +14,9 @@ class Now:
             response = requests.get(url=room_url).json()
             result = response.get('result')
             real_url = {
-                'raw_hls_url': result.get('raw_hls_url', 0),
-                'raw_rtmp_url': result.get('raw_rtmp_url', 0),
-                'raw_flv_url': result.get('raw_flv_url', 0)
+                'hls_url': result.get('raw_hls_url', 0),
+                'rtmp_url': result.get('raw_rtmp_url', 0),
+                'flv_url': result.get('raw_flv_url', 0)
             }
         except:
             raise Exception('直播间不存在或未开播')

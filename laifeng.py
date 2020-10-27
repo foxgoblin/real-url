@@ -28,7 +28,8 @@ class LaiFeng:
 def get_real_url(rid):
     try:
         lf = LaiFeng(rid)
-        return lf.get_real_url()
+        real_url = lf.get_real_url()
+        return {'hls_url':real_url['Hls'], 'flv_url':real_url['HttpFlv']}
     except Exception as e:
         print('Exception：', e)
         return False

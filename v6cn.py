@@ -26,7 +26,8 @@ class V6CN:
 def get_real_url(rid):
     try:
         v6cn = V6CN(rid)
-        return v6cn.get_real_url()
+        real_url = v6cn.get_real_url()
+        return {'hls_url': real_url[0], 'flv_url': real_url[1]}
     except Exception as e:
         print('Exception：', e)
         return False
