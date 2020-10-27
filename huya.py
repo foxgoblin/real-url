@@ -69,7 +69,7 @@ def get_real_url(rid):
     try:
         hy = HuYa(rid)
         real_url = hy.get_real_url()
-        if 'tx' in real_url
+        if 'tx' in real_url :
             return real_url['tx']
         elif '2000p' in real_url :
             return real_url['2000p']
